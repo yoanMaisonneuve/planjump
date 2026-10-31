@@ -4,13 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PlanJump — Fini le scroll dans les plans de construction</title>
-<meta name="description" content="Quand quelqu'un cherche un détail dans un PDF de vingt pages, toute la réunion attend. Touchez un mur, arrivez sur son élévation ; touchez une coupe, arrivez sur le détail. Gratuit, sans compte, et le plan ne quitte pas le téléphone.">
+<meta name="description" content="Quand quelqu'un cherche un détail dans un PDF de vingt pages, toute la réunion attend. Touchez un mur, arrivez sur son élévation ; touchez une coupe, arrivez sur le détail. Essai gratuit sur un de vos plans.">
 <link rel="canonical" href="https://planjump.ca/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="PlanJump">
 <meta property="og:title" content="PlanJump — Fini le scroll dans les plans">
-<meta property="og:description" content="Pendant qu'une personne cherche un détail, toute la table attend. Touchez un mur, arrivez au bon détail. Gratuit, sans compte, et le plan reste dans le téléphone.">
+<meta property="og:description" content="Pendant qu'une personne cherche un détail, toute la table attend. Touchez un mur, arrivez au bon détail. Essai gratuit sur un de vos plans.">
 <meta property="og:url" content="https://planjump.ca/">
 <meta name="twitter:card" content="summary">
 <link rel="icon" href="/plan/icon.svg" type="image/svg+xml">
@@ -30,7 +30,11 @@
   "url": "https://planjump.ca/",
   "description": "Lecture de dessins d'atelier et de plans de construction sur cellulaire : les renvois du dessin deviennent touchables, du mur à l'élévation et de la coupe au détail.",
   "inLanguage": "fr-CA",
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD", "description": "Essai gratuit, sans compte"},
+  "offers": [
+    {"@type": "Offer", "price": "0", "priceCurrency": "CAD", "description": "Essai gratuit sur un plan"},
+    {"@type": "Offer", "price": "5.99", "priceCurrency": "CAD", "description": "Travailleur : tous ses plans, par mois"},
+    {"@type": "Offer", "price": "100", "priceCurrency": "CAD", "description": "Entreprise : toute l'équipe, par mois"}
+  ],
   "publisher": {"@type": "Person", "name": "Yoan Maisonneuve"}
 }
 </script>
@@ -181,6 +185,11 @@ blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-style
   blockquote{padding:16px 18px;font-size:17.5px}
 }
 </style>
+<!-- v18 (30.10.2026, Yoan : « configurer le Gold Counter pour plan jump ») : la mesure d'audience, GoatCounter —
+     sans témoin, sans donnée personnelle, et jamais le plan. Le nom du site devant le chemin : planjump.ca et
+     ymiaconseil.com servent la même app, on les compte à part. -->
+<script>window.goatcounter = { path: function (p) { return location.host + p; } };</script>
+<script data-goatcounter="https://planjump.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 
@@ -202,7 +211,7 @@ blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-style
     <p class="hero-note">L'app lit le dessin, trouve les renvois toute seule, et les rend touchables.
       Aucune préparation, aucun marquage à la main.</p>
     <div class="cta-row">
-      <a class="btn btn-or" href="/plan/">Essayer sur votre plan<small>Gratuit &middot; aucun compte</small></a>
+      <a class="btn btn-or" href="/plan/">Essayer sur votre plan<small>Essai gratuit &middot; un plan</small></a>
       <a class="btn btn-fil" href="#comment">Voir comment ça marche</a>
     </div>
   </div>
@@ -264,10 +273,8 @@ blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-style
 <section class="band sand">
   <div class="wrap">
     <p class="kicker">Ce que ça ne fait pas, exprès</p>
-    <h2>Trois choses qui comptent<br>sur un chantier</h2>
+    <h2>Deux choses qui comptent<br>sur un chantier</h2>
     <ul class="nofaire">
-      <li><strong>Le plan ne part nulle part.</strong> Il est lu dans le téléphone et il y reste.
-        Aucun téléversement, aucun serveur. Les dessins d'un client restent ceux du client.</li>
       <li><strong>Ça marche sans réseau.</strong> Une fois la page ouverte, l'app fonctionne hors ligne.
         Dans un sous-sol de béton, c'est la différence entre un outil et une icône.</li>
       <li><strong>Ça ne devine pas.</strong> Un renvoi ambigu ouvre un choix au lieu de vous envoyer
@@ -295,25 +302,28 @@ blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-style
   </div>
 </section>
 
-<section class="band sand">
+<section class="band sand" id="prix">
   <div class="wrap">
-    <p class="kicker">Où c'en est</p>
-    <h2>Ce qui marche aujourd'hui,<br>ce qui s'en vient</h2>
+    <p class="kicker">Les prix</p>
+    <h2>Essayez sur un plan,<br>gardez-le pour tous les autres</h2>
     <div class="suite">
       <div>
-        <span class="etiquette et-vivant">En ligne maintenant</span>
-        <h3>L'app, gratuite</h3>
-        <p>Vous ouvrez votre PDF, l'app le lit une fois et rend les renvois touchables.
-          Rien à installer, aucun compte, aucun abonnement. C'est la version que vous pouvez
-          essayer tout de suite sur un de vos plans.</p>
+        <span class="etiquette et-vivant">Essai gratuit</span>
+        <div class="prix">0&nbsp;$ <span>un plan</span></div>
+        <p>Ouvrez un de vos plans au complet : l'app le lit une fois et rend tous ses renvois touchables.</p>
       </div>
       <div>
-        <span class="etiquette et-venir">Pour les compagnies</span>
-        <h3>L'offre aux trois premières compagnies</h3>
-        <p>Un essai gratuit de 30 jours sur un de vos chantiers. Si vos équipes s'en servent,
-          les trois premières compagnies auront un prix de client fondateur.</p>
+        <span class="etiquette et-venir">Travailleur</span>
+        <div class="prix">5,99&nbsp;$ <span>par mois</span></div>
+        <p>Tous vos plans, sur votre cellulaire, d'un chantier à l'autre.</p>
+      </div>
+      <div>
+        <span class="etiquette et-venir">Entreprise</span>
+        <div class="prix">100&nbsp;$ <span>par mois</span></div>
+        <p>Toute l'équipe, chaque employé, un seul abonnement. Appelez-nous : on le monte avec vous.</p>
       </div>
     </div>
+    <p style="margin-top:22px">L'abonnement en ligne ouvre sous peu ; d'ici là, l'app reste ouverte à tous.</p>
   </div>
 </section>
 
@@ -334,6 +344,7 @@ blockquote cite{display:block;margin-top:12px;font-family:var(--mono);font-style
 <footer class="foot">
   <div class="wrap">
     <span>PlanJump &middot; Grand Montréal</span>
+    <span>Mesure d'audience anonyme, sans témoin (GoatCounter)</span>
     <span><a href="/plan/">Ouvrir l'app</a></span>
   </div>
 </footer>
